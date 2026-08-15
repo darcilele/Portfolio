@@ -111,7 +111,6 @@ html {
 
   /* Organic blob masks */
   .mask-organic {
-    -webkit-mask-image: radial-gradient(circle, black 100%, transparent 100%);
     border-radius: 62% 38% 58% 42% / 45% 55% 45% 55%;
   }
   .mask-organic-alt {
