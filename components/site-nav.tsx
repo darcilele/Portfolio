@@ -37,7 +37,7 @@ export function SiteNav() {
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
         <a href="#topo" className="group flex flex-col leading-none">
           <span className="font-serif text-xl tracking-tight text-primary-900 md:text-2xl">
-            Letícia Darci
+            Leticia Darci
           </span>
           <span className="text-[0.68rem] uppercase tracking-[0.32em] text-primary-400">
             Psicologia
