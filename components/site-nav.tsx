@@ -63,7 +63,7 @@ export function SiteNav() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full border border-primary-200 px-6 py-2.5 text-sm text-primary-800 transition-all duration-500 hover:border-tertiary hover:bg-tertiary hover:text-neutral-0 md:inline-block"
+            className="hidden rounded-full border border-primary-200 px-6 py-2.5 text-sm text-primary-700 transition-all duration-500 hover:border-tertiary hover:bg-tertiary hover:text-neutral-0 md:inline-block"
           >
             Agendar Consulta
           </a>
@@ -75,11 +75,11 @@ export function SiteNav() {
             className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
           >
             <span
-              className={`h-px w-6 bg-primary-800 transition-transform duration-300 ${open ? 'translate-y-[7px] rotate-45' : ''}`}
+              className={`h-px w-6 bg-primary-900 transition-transform duration-300 ${open ? 'translate-y-[7px] rotate-45' : ''}`}
             />
-            <span className={`h-px w-6 bg-primary-800 transition-opacity duration-300 ${open ? 'opacity-0' : ''}`} />
+            <span className={`h-px w-6 bg-primary-900 transition-opacity duration-300 ${open ? 'opacity-0' : ''}`} />
             <span
-              className={`h-px w-6 bg-primary-800 transition-transform duration-300 ${open ? '-translate-y-[7px] -rotate-45' : ''}`}
+              className={`h-px w-6 bg-primary-900 transition-transform duration-300 ${open ? '-translate-y-[7px] -rotate-45' : ''}`}
             />
           </button>
         </div>
@@ -87,8 +87,8 @@ export function SiteNav() {
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden border-t border-primary-100/70 bg-secondary-50/95 backdrop-blur-md transition-[max-height] duration-500 lg:hidden ${
-          open ? 'max-h-96' : 'max-h-0'
+        className={`overflow-y-auto border-t border-primary-100/70 bg-secondary-50/95 backdrop-blur-md transition-[max-height] duration-500 lg:hidden ${
+          open ? 'max-h-[calc(100vh_-_5rem)]' : 'max-h-0'
         }`}
       >
         <ul className="flex flex-col gap-1 px-6 py-4">
@@ -97,7 +97,7 @@ export function SiteNav() {
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block py-2.5 font-serif text-2xl text-primary-800"
+                className="block py-2.5 font-serif text-2xl text-primary-700"
               >
                 {link.label}
               </a>

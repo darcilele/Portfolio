@@ -1,0 +1,216 @@
+diff --git a/components/about.tsx b/components/about.tsx
+index e420d2c..d393309 100644
+--- a/components/about.tsx
++++ b/components/about.tsx
+@@ -1,5 +1,6 @@
+ import Image from 'next/image'
+ import { Reveal } from './reveal'
++import { assetPath } from '@/lib/utils'
+ 
+ const facts = [
+   ['Psicóloga Clínica', 'CRP 02/33177'],
+@@ -32,7 +33,7 @@ export function About() {
+           <Reveal variant="left" className="lg:col-span-7">
+             <div className="mask-organic-alt grain relative aspect-[5/6] overflow-hidden bg-primary-100 shadow-[0_40px_80px_-45px_rgba(44,33,31,0.5)] sm:aspect-[4/3] lg:aspect-[5/6]">
+               <Image
+-                src="/images/Perfil/Leticia.jpg"
++                src={assetPath('/images/Perfil/Leticia.jpg')}
+                 alt="Leticia Darci em um ambiente sereno e acolhedor"
+                 fill
+                 sizes="(max-width: 1024px) 90vw, 55vw"
+diff --git a/components/certificates.tsx b/components/certificates.tsx
+index 38d7487..385b4db 100644
+--- a/components/certificates.tsx
++++ b/components/certificates.tsx
+@@ -1,6 +1,7 @@
+ 'use client'
+ 
+ import Image from 'next/image'
++import { assetPath } from '@/lib/utils'
+ import { useEffect, useState } from 'react'
+ import { ChevronLeft, ChevronRight } from 'lucide-react'
+ import { Reveal } from './reveal'
+@@ -17,42 +18,42 @@ const FRAME_ASPECT_CLASS = 'aspect-[3508/2481]'
+ 
+ const certificates = [
+   {
+-    src: '/images/Certificados/Certificado ABA _page-0001.jpg',
++    src: assetPath('/images/Certificados/Certificado ABA _page-0001.jpg'),
+     title: 'Curso ABA e Autismo para Profissionais',
+     org: 'Capacitação e Aprimoramento em ABA (180 horas/aula)',
+   },
+   {
+-    src: '/images/Certificados/4 simpósio Unicap_page-0001.jpg',
++    src: assetPath('/images/Certificados/4 simpósio Unicap_page-0001.jpg'),
+     title: '4º Simpósio de Psicologia da Unicap',
+     org: 'Diálogos interdisciplinares possíveis (20 horas)',
+   },
+   {
+-    src: '/images/Certificados/Certificado AT_page-0001.jpg',
++    src: assetPath('/images/Certificados/Certificado AT_page-0001.jpg'),
+     title: 'Curso de Acompanhante Terapêutico',
+     org: 'Certificado de Conclusão - Carga horária de 120 horas',
+   },
+   {
+-    src: '/images/Certificados/Certificado ledora e transcritora_page-0001.jpg',
++    src: assetPath('/images/Certificados/Certificado ledora e transcritora_page-0001.jpg'),
+     title: 'Curso de Formação de Ledores e Transcritores',
+     org: 'Apto(a) para atuar em concursos e avaliações (20 horas)',
+   },
+   {
+-    src: '/images/Certificados/DECLARAÇÃO DE CONCLUSÃO.jpg',
++    src: assetPath('/images/Certificados/DECLARAÇÃO DE CONCLUSÃO.jpg'),
+     title: 'Declaração de Conclusão de Graduação',
+     org: 'Bacharelado em Psicologia - UNINASSAU',
+   },
+   {
+-    src: '/images/Certificados/Evento tecnologia, felicidade e motivação_page-0001.jpg',
++    src: assetPath('/images/Certificados/Evento tecnologia, felicidade e motivação_page-0001.jpg'),
+     title: 'A Apropriação da Tecnologia Envolvendo a Felicidade e Motivação',
+     org: 'Evento Acadêmico - UNINASSAU',
+   },
+   {
+-    src: '/images/Certificados/TOD_page-0001.jpg',
++    src: assetPath('/images/Certificados/TOD_page-0001.jpg'),
+     title: 'Congresso de Transtorno Opositivo Desafiador (TOD)',
+     org: 'Diagnóstico, Intervenção e Comorbidades (10 horas)',
+   },
+   {
+-    src: '/images/Certificados/VII Congresso Multidisciplinar de Saúde_page-0001.jpg',
++    src: assetPath('/images/Certificados/VII Congresso Multidisciplinar de Saúde_page-0001.jpg'),
+     title: 'A Apropriação da Tecnologia Envolvendo a Felicidade e Motivação',
+     org: 'Evento Acadêmico - UNINASSAU',
+   },
+@@ -163,7 +164,7 @@ export function Certificates() {
+                       className={`relative ${FRAME_ASPECT_CLASS} h-[22rem] overflow-hidden rounded-[20px] border border-primary-100 bg-neutral-0 shadow-[0_40px_80px_-40px_rgba(44,33,31,0.55)] md:h-[28rem]`}
+                     >
+                       <Image
+-                        src={cert.src || '/placeholder.svg'}
++                        src={cert.src || assetPath('/placeholder.svg')}
+                         alt={cert.title}
+                         fill
+                         sizes="(max-width: 768px) 70vw, 30vw"
+diff --git a/components/gallery.tsx b/components/gallery.tsx
+index a85e1d7..38481a7 100644
+--- a/components/gallery.tsx
++++ b/components/gallery.tsx
+@@ -4,13 +4,14 @@ import Image from 'next/image'
+ import { useState } from 'react'
+ import { Reveal } from './reveal'
+ import { Lightbox } from './lightbox'
++import { assetPath } from '@/lib/utils'
+ 
+ const images = [
+-  { src: '/images/Experiencias/2.jpeg', alt: '', span: 'row-span-2' },
+-  { src: '/images/Experiencias/3.jpeg', alt: '', span: '' },
+-  { src: '/images/Experiencias/4.jpeg', alt: '', span: '' },
+-  { src: '/images/Experiencias/5.jpeg', alt: '', span: 'row-span-2' },
+-  { src: '/images/Experiencias/6.jpeg', alt: '', span: '' },
++  { src: assetPath('/images/Experiencias/2.jpeg'), alt: '', span: 'row-span-2' },
++  { src: assetPath('/images/Experiencias/3.jpeg'), alt: '', span: '' },
++  { src: assetPath('/images/Experiencias/4.jpeg'), alt: '', span: '' },
++  { src: assetPath('/images/Experiencias/5.jpeg'), alt: '', span: 'row-span-2' },
++  { src: assetPath('/images/Experiencias/6.jpeg'), alt: '', span: '' },
+ ]
+ 
+ export function Gallery() {
+@@ -44,7 +45,7 @@ export function Gallery() {
+                 className="absolute inset-0 h-full w-full cursor-zoom-in appearance-none border-0 bg-transparent p-0"
+               >
+                 <Image
+-                  src={img.src || '/placeholder.svg'}
++                  src={img.src || assetPath('/placeholder.svg')}
+                   alt={img.alt}
+                   fill
+                   sizes="(max-width: 768px) 50vw, 25vw"
+diff --git a/components/hero.tsx b/components/hero.tsx
+index e75c492..4e60a92 100644
+--- a/components/hero.tsx
++++ b/components/hero.tsx
+@@ -3,6 +3,7 @@
+ import Image from 'next/image'
+ import { ArrowUpRight } from 'lucide-react'
+ import { Botanical } from './botanical'
++import { assetPath } from '@/lib/utils'
+ 
+ const WHATSAPP = 'https://wa.me/558192942851'
+ 
+@@ -74,7 +75,7 @@ export function Hero() {
+ 
+             <div className="mask-organic grain relative aspect-[4/5] overflow-hidden bg-primary-100 shadow-[0_40px_80px_-40px_rgba(44,33,31,0.55)]">
+               <Image
+-                src="/images/Perfil/1.jpeg"
++                src={assetPath('/images/Perfil/1.jpeg')}
+                 alt="Retrato da psicóloga Leticia Darci Silva Rocha"
+                 fill
+                 priority
+diff --git a/components/lightbox.tsx b/components/lightbox.tsx
+index 5c6d6f3..442d556 100644
+--- a/components/lightbox.tsx
++++ b/components/lightbox.tsx
+@@ -4,6 +4,7 @@ import Image from 'next/image'
+ import { createPortal } from 'react-dom'
+ import { useCallback, useEffect, useRef, useState } from 'react'
+ import { X, ChevronLeft, ChevronRight } from 'lucide-react'
++import { assetPath } from '@/lib/utils'
+ 
+ export interface LightboxItem {
+   src: string
+@@ -191,7 +192,7 @@ export function Lightbox({ items, index, isOpen, onClose, onIndexChange }: Light
+           }`}
+         >
+           <Image
+-            src={current.src || '/placeholder.svg'}
++            src={current.src || assetPath('/placeholder.svg')}
+             alt={current.alt}
+             fill
+             sizes="90vw"
+diff --git a/lib/utils.ts b/lib/utils.ts
+index fed2fe9..0318e25 100644
+--- a/lib/utils.ts
++++ b/lib/utils.ts
+@@ -4,3 +4,17 @@ import { twMerge } from 'tailwind-merge'
+ export function cn(...inputs: ClassValue[]) {
+   return twMerge(clsx(inputs))
+ }
++
++/**
++ * Prefixes a root-relative `/public` asset path with the app's basePath
++ * (e.g. "/Portfolio" on GitHub Pages, "" locally).
++ *
++ * Needed because `next/image` does NOT automatically prepend basePath to
++ * `src` when `images.unoptimized: true` is set (required for `output: 'export'`).
++ * Without this, hardcoded paths like `/images/foo.jpg` resolve to the domain
++ * root instead of `/Portfolio/images/foo.jpg` and 404 on GitHub Pages.
++ */
++export function assetPath(path: string) {
++  const base = process.env.NEXT_PUBLIC_BASE_PATH || ''
++  return `${base}${path.startsWith('/') ? path : `/${path}`}`
++}
+diff --git a/next.config.mjs b/next.config.mjs
+index c06d2cb..7f81563 100644
+--- a/next.config.mjs
++++ b/next.config.mjs
+@@ -1,12 +1,19 @@
++const basePath = '/Portfolio';
++
+ /** @type {import('next').NextConfig} */
+ const nextConfig = {
+   output: 'export',
+-  basePath: '/Portfolio',
+-  assetPrefix: '/Portfolio/',
++  basePath,
++  assetPrefix: `${basePath}/`,
+   trailingSlash: true,
+   images: {
+     unoptimized: true,
+   },
++  // Exposed so components can prefix hardcoded `/public` asset paths
++  // (next/image does NOT auto-prepend basePath when images.unoptimized is true).
++  env: {
++    NEXT_PUBLIC_BASE_PATH: basePath,
++  },
+ };
+ 
+ export default nextConfig;
+\ No newline at end of file

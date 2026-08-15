@@ -47,7 +47,7 @@ export function Hero() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2.5 rounded-full border border-primary-200 px-7 py-4 text-sm text-primary-800 transition-all duration-500 hover:border-tertiary hover:text-tertiary-700"
+              className="group inline-flex items-center gap-2.5 rounded-full border border-primary-200 px-7 py-4 text-sm text-primary-700 transition-all duration-500 hover:border-tertiary hover:text-tertiary-700"
             >
               <span className="h-2 w-2 rounded-full bg-tertiary transition-transform duration-500 group-hover:scale-125" />
               WhatsApp

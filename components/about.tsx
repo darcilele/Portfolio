@@ -45,7 +45,7 @@ export function About() {
           {/* Text + floating card */}
           <div className="flex flex-col justify-center lg:col-span-5">
             <Reveal variant="right">
-              <p className="font-serif text-2xl font-light leading-relaxed text-primary-800 md:text-3xl">
+              <p className="font-serif text-2xl font-light leading-relaxed text-primary-700 md:text-3xl">
                 Acredito que toda pessoa carrega uma história única — e que ser
                 verdadeiramente ouvida já é, em si, um gesto de cuidado.
               </p>

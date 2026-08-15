@@ -138,7 +138,7 @@ export function Certificates() {
           onMouseLeave={() => setIsHovering(false)}
         >
           <div className="relative flex items-center justify-center">
-            <div className="relative flex h-[26rem] w-full items-center justify-center md:h-[32rem]">
+            <div className="relative flex h-56 w-full items-center justify-center sm:h-72 md:h-96 lg:h-[32rem]">
               {certificates.map((cert, i) => {
                 const offset = shortestDiff(i, active, total)
                 const isActive = offset === 0
@@ -161,7 +161,7 @@ export function Certificates() {
                     }}
                   >
                     <div
-                      className={`relative ${FRAME_ASPECT_CLASS} h-[22rem] overflow-hidden rounded-[20px] border border-primary-100 bg-neutral-0 shadow-[0_40px_80px_-40px_rgba(44,33,31,0.55)] md:h-[28rem]`}
+                      className={`relative ${FRAME_ASPECT_CLASS} h-44 overflow-hidden rounded-[20px] border border-primary-100 bg-neutral-0 shadow-[0_40px_80px_-40px_rgba(44,33,31,0.55)] sm:h-64 md:h-80 lg:h-[28rem]`}
                     >
                       <Image
                         src={cert.src || assetPath('/placeholder.svg')}
