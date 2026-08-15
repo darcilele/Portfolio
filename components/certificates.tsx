@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { assetPath } from '@/lib/utils'
 import { useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Reveal } from './reveal'
@@ -17,42 +18,42 @@ const FRAME_ASPECT_CLASS = 'aspect-[3508/2481]'
 
 const certificates = [
   {
-    src: '/images/Certificados/Certificado ABA _page-0001.jpg',
+    src: assetPath('/images/Certificados/Certificado ABA _page-0001.jpg'),
     title: 'Curso ABA e Autismo para Profissionais',
     org: 'Capacitação e Aprimoramento em ABA (180 horas/aula)',
   },
   {
-    src: '/images/Certificados/4 simpósio Unicap_page-0001.jpg',
+    src: assetPath('/images/Certificados/4 simpósio Unicap_page-0001.jpg'),
     title: '4º Simpósio de Psicologia da Unicap',
     org: 'Diálogos interdisciplinares possíveis (20 horas)',
   },
   {
-    src: '/images/Certificados/Certificado AT_page-0001.jpg',
+    src: assetPath('/images/Certificados/Certificado AT_page-0001.jpg'),
     title: 'Curso de Acompanhante Terapêutico',
     org: 'Certificado de Conclusão - Carga horária de 120 horas',
   },
   {
-    src: '/images/Certificados/Certificado ledora e transcritora_page-0001.jpg',
+    src: assetPath('/images/Certificados/Certificado ledora e transcritora_page-0001.jpg'),
     title: 'Curso de Formação de Ledores e Transcritores',
     org: 'Apto(a) para atuar em concursos e avaliações (20 horas)',
   },
   {
-    src: '/images/Certificados/DECLARAÇÃO DE CONCLUSÃO.jpg',
+    src: assetPath('/images/Certificados/DECLARAÇÃO DE CONCLUSÃO.jpg'),
     title: 'Declaração de Conclusão de Graduação',
     org: 'Bacharelado em Psicologia - UNINASSAU',
   },
   {
-    src: '/images/Certificados/Evento tecnologia, felicidade e motivação_page-0001.jpg',
+    src: assetPath('/images/Certificados/Evento tecnologia, felicidade e motivação_page-0001.jpg'),
     title: 'A Apropriação da Tecnologia Envolvendo a Felicidade e Motivação',
     org: 'Evento Acadêmico - UNINASSAU',
   },
   {
-    src: '/images/Certificados/TOD_page-0001.jpg',
+    src: assetPath('/images/Certificados/TOD_page-0001.jpg'),
     title: 'Congresso de Transtorno Opositivo Desafiador (TOD)',
     org: 'Diagnóstico, Intervenção e Comorbidades (10 horas)',
   },
   {
-    src: '/images/Certificados/VII Congresso Multidisciplinar de Saúde_page-0001.jpg',
+    src: assetPath('/images/Certificados/VII Congresso Multidisciplinar de Saúde_page-0001.jpg'),
     title: 'A Apropriação da Tecnologia Envolvendo a Felicidade e Motivação',
     org: 'Evento Acadêmico - UNINASSAU',
   },
@@ -163,7 +164,7 @@ export function Certificates() {
                       className={`relative ${FRAME_ASPECT_CLASS} h-[22rem] overflow-hidden rounded-[20px] border border-primary-100 bg-neutral-0 shadow-[0_40px_80px_-40px_rgba(44,33,31,0.55)] md:h-[28rem]`}
                     >
                       <Image
-                        src={cert.src || '/placeholder.svg'}
+                        src={cert.src || assetPath('/placeholder.svg')}
                         alt={cert.title}
                         fill
                         sizes="(max-width: 768px) 70vw, 30vw"

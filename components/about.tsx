@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Reveal } from './reveal'
+import { assetPath } from '@/lib/utils'
 
 const facts = [
   ['Psicóloga Clínica', 'CRP 02/33177'],
@@ -32,7 +33,7 @@ export function About() {
           <Reveal variant="left" className="lg:col-span-7">
             <div className="mask-organic-alt grain relative aspect-[5/6] overflow-hidden bg-primary-100 shadow-[0_40px_80px_-45px_rgba(44,33,31,0.5)] sm:aspect-[4/3] lg:aspect-[5/6]">
               <Image
-                src="/images/Perfil/Leticia.jpg"
+                src={assetPath('/images/Perfil/Leticia.jpg')}
                 alt="Leticia Darci em um ambiente sereno e acolhedor"
                 fill
                 sizes="(max-width: 1024px) 90vw, 55vw"

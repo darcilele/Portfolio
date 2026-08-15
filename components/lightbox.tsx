@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { createPortal } from 'react-dom'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { assetPath } from '@/lib/utils'
 
 export interface LightboxItem {
   src: string
@@ -191,7 +192,7 @@ export function Lightbox({ items, index, isOpen, onClose, onIndexChange }: Light
           }`}
         >
           <Image
-            src={current.src || '/placeholder.svg'}
+            src={current.src || assetPath('/placeholder.svg')}
             alt={current.alt}
             fill
             sizes="90vw"

@@ -4,13 +4,14 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Reveal } from './reveal'
 import { Lightbox } from './lightbox'
+import { assetPath } from '@/lib/utils'
 
 const images = [
-  { src: '/images/Experiencias/2.jpeg', alt: '', span: 'row-span-2' },
-  { src: '/images/Experiencias/3.jpeg', alt: '', span: '' },
-  { src: '/images/Experiencias/4.jpeg', alt: '', span: '' },
-  { src: '/images/Experiencias/5.jpeg', alt: '', span: 'row-span-2' },
-  { src: '/images/Experiencias/6.jpeg', alt: '', span: '' },
+  { src: assetPath('/images/Experiencias/2.jpeg'), alt: '', span: 'row-span-2' },
+  { src: assetPath('/images/Experiencias/3.jpeg'), alt: '', span: '' },
+  { src: assetPath('/images/Experiencias/4.jpeg'), alt: '', span: '' },
+  { src: assetPath('/images/Experiencias/5.jpeg'), alt: '', span: 'row-span-2' },
+  { src: assetPath('/images/Experiencias/6.jpeg'), alt: '', span: '' },
 ]
 
 export function Gallery() {
@@ -44,7 +45,7 @@ export function Gallery() {
                 className="absolute inset-0 h-full w-full cursor-zoom-in appearance-none border-0 bg-transparent p-0"
               >
                 <Image
-                  src={img.src || '/placeholder.svg'}
+                  src={img.src || assetPath('/placeholder.svg')}
                   alt={img.alt}
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"

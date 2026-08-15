@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 import { Botanical } from './botanical'
+import { assetPath } from '@/lib/utils'
 
 const WHATSAPP = 'https://wa.me/558192942851'
 
@@ -74,7 +75,7 @@ export function Hero() {
 
             <div className="mask-organic grain relative aspect-[4/5] overflow-hidden bg-primary-100 shadow-[0_40px_80px_-40px_rgba(44,33,31,0.55)]">
               <Image
-                src="/images/Perfil/1.jpeg"
+                src={assetPath('/images/Perfil/1.jpeg')}
                 alt="Retrato da psicóloga Leticia Darci Silva Rocha"
                 fill
                 priority
