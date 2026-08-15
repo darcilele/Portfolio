@@ -181,7 +181,7 @@ export function Lightbox({ items, index, isOpen, onClose, onIndexChange }: Light
       )}
 
       <div
-        className={`relative flex h-full w-full items-center justify-center px-4 py-16 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:px-20 ${
+        className={`relative flex h-full w-full items-center justify-center px-14 py-16 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:px-20 ${
           visible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
         }`}
         onClick={(e) => e.stopPropagation()}
